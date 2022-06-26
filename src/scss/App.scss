@@ -1,0 +1,131 @@
+@import "libs/normalaize";
+@import "components/all";
+
+body {
+    font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #424449;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+
+.container {
+    max-width: 970px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.items {
+    .title {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        max-width: 500px;
+        justify-content: space-between;
+        &__cat {
+            text-transform: uppercase;
+        }
+        &__catIcon {
+            margin-right: 25px;
+            width: 15px;
+            height: 15px;
+            fill: #ff9c00;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__paginationBtn {
+        margin: 0 auto;
+        background-color: #25aef5;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        width: 120px;
+        height: 60px;
+    }
+    @media (max-width: 480px) {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+}
+
+.itemCard {
+    &__wrapper {
+        display: flex;
+        margin-top: 40px;
+    }
+    &__img {
+        display: flex;
+        margin-right: 30px;
+        align-items: center;
+        justify-content: center;
+        max-width: 430px;
+        width: 100%;
+        height: 560px;
+        img {
+            height: 60%;
+        }
+    }
+    .itemCardInfo {
+        &__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1f2022;
+        }
+        &__categoriesWrapper,
+        &__authorsWrapper {
+            display: flex;
+            color: #424449;
+            flex-wrap: wrap;
+        }
+        li {
+            padding-right: 5px;
+            white-space: nowrap;
+            font-size: 16px;
+            &:after {
+                content: ",";
+            }
+            &:last-child::after {
+                content: "";
+            }
+        }
+        &__categoriesWrapper {
+            margin: 20px 0;
+        }
+        &__authorsWrapper {
+            margin-bottom: 50px;
+        }
+    }
+    .itemCardDescr {
+        &__title {
+            width: 132px;
+            color: #fff;
+            background-color: #1f2022;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 15px;
+        }
+        &__text {
+            min-height: 190px;
+            padding: 25px;
+            border: 1px solid #e5e5e5;
+            margin-bottom: 50px;
+        }
+    }
+    @media (max-width: 550px) {
+        &__wrapper {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

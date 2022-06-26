@@ -1,0 +1,42 @@
+.item {
+    max-width: 210px;
+    margin: 10px 0;
+    border: 1px solid #e5e5e5;
+    &__imgWrapper {
+        position: relative;
+        width: 210px;
+        height: 275px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+    &__inner {
+        border-top: 1px solid #e5e5e5;
+        padding: 10px;
+    }
+    &__categotiesWrapper,
+    &__authorWrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__categotiesWrapper {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    li {
+        padding-right: 2px;
+        &:after {
+            content: ",";
+        }
+        &:last-child::after {
+            content: "";
+        }
+    }
+}

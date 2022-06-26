@@ -1,0 +1,185 @@
+.menu {
+    position: relative;
+    background-color: #1f2022;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__inner {
+        width: 100%;
+        display: flex;
+    }
+    .search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__input {
+            max-width: 473px;
+            width: 100%;
+            font-size: 18px;
+            padding: 15px 15px 15px 20px;
+            height: 60px;
+        }
+        &__btn {
+            width: 60px;
+            height: 60px;
+        }
+        &__icon {
+            width: 22px;
+            height: 22px;
+            fill: #ffffff;
+        }
+    }
+    &__catBtn {
+        width: 250px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-color: #25aef5;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    &__menuIcon {
+        width: 12px;
+        height: 12px;
+        fill: #ffffff;
+        margin: 20px;
+    }
+    .filterPopUp {
+        top: 65px;
+        background-color: #fff;
+        color: #000;
+        margin: 0;
+        position: absolute;
+        z-index: 999999;
+        border: 1px solid #d8d8d8;
+        width: 250px;
+        padding: 12px 0;
+        &.none {
+            display: none;
+        }
+    }
+
+    .filterPopUpItem {
+        display: flex;
+        align-items: center;
+        padding: 12px 12px 12px 30px;
+        line-height: 20px;
+        font-size: 13px;
+        text-transform: uppercase;
+        cursor: pointer;
+        svg {
+            padding-right: 30px;
+            fill: #8d8d8d;
+            width: 50px;
+            height: 30px;
+        }
+        &:hover {
+            color: #ff9c00;
+            svg {
+                fill: #ff9c00;
+            }
+        }
+    }
+    &__sort {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__sortTitle {
+        width: 50px;
+        margin-right: 10px;
+        font-weight: 300;
+        color: #fff;
+    }
+    &__sortBtn {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        display: flex;
+        padding: 0 15px;
+        align-items: center;
+        justify-content: space-between;
+        width: 150px;
+        height: 36px;
+        color: #fff;
+        letter-spacing: 0.5px;
+        border: 1px solid #525252;
+        background-color: #424449;
+        svg {
+            width: 15px;
+            height: 15px;
+            fill: #fff;
+        }
+        &.close svg {
+            transform: rotate(180deg);
+        }
+        span {
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+    }
+    .sortPopUp {
+        top: 48px;
+        left: 60px;
+        width: 150px;
+        background-color: #424449;
+        color: #fff;
+        margin: 0;
+        position: absolute;
+        z-index: 999999;
+        border: 1px solid #525252;
+        &.none {
+            display: none;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            padding: 3px 3px 3px 15px;
+            font-size: 13px;
+            &:hover {
+                background-color: #25aef5;
+                cursor: default;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .menu__wrapper {
+            flex-direction: column;
+        }
+        .menu__catBtn {
+            margin-top: 5px;
+        }
+        .search {
+            &__input {
+                max-width: 100%;
+            }
+            &__btn {
+                border: 1px solid #525252;
+            }
+        }
+        .filterPopUp {
+            top: 130px;
+        }
+    }
+    @media (max-width: 440px) {
+        .menu {
+            &__inner {
+                flex-direction: column;
+            }
+            &__catBtn {
+                width: 100%;
+            }
+            &__sort {
+                margin-top: 5px;
+            }
+        }
+        .sortPopUp {
+            top: 36px;
+        }
+    }
+}

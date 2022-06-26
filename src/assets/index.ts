@@ -1,0 +1,11 @@
+export { ReactComponent as MenuIcon } from "./menu.svg";
+export { ReactComponent as ComputersIcon } from "./computers.svg";
+export { ReactComponent as ArtIcon } from "./art.svg";
+export { ReactComponent as BiographyIcon } from "./biography.svg";
+export { ReactComponent as HistoryIcon } from "./history.svg";
+export { ReactComponent as MedicalIcon } from "./medical.svg";
+export { ReactComponent as PoetryIcon } from "./poetry.svg";
+export { ReactComponent as ArrowIcon } from "./arrow.svg";
+export { ReactComponent as AllIcon } from "./all.svg";
+export { ReactComponent as Star } from "./star.svg";
+export { ReactComponent as Search } from "./search.svg";
